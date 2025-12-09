@@ -1,0 +1,20 @@
+.nav-content ul,
+.buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.nav-content ul {
+  gap: 15px;
+}
+
+.nav-content ul li a {
+  color: black;
+}
+
+.buttons {
+  gap: 10px;
+}

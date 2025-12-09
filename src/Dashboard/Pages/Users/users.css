@@ -1,0 +1,51 @@
+.users {
+  padding: 1.5em 2em;
+  width: 85%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.users h3 {
+  color: #2c9e2c;
+  font-size: 2em;
+}
+
+table {
+  width: 100%;
+  border: 1px solid #7a7c7aad;
+  border-collapse: collapse;
+}
+
+thead {
+  background-color: #2c9e2c;
+  color: rgb(249, 250, 252);
+}
+
+tr:nth-child(even) {
+  background-color: #c7fcc7;
+}
+
+td,
+th {
+  text-align: center;
+  padding: 0.5em;
+}
+
+td {
+  border: 1px solid #7a7c7aad;
+  font-weight: 500;
+}
+
+.actions {
+  width: 60%;
+  margin: auto;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.actions * {
+  cursor: pointer;
+}

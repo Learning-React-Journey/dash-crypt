@@ -1,0 +1,27 @@
+.loading-wrapper {
+  background-color: rgb(38, 38, 49);
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.spinner {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 3px solid rgba(211, 210, 210, 0.596);
+  border-bottom-color: white;
+  transform-origin: center;
+  animation: rotation 1.2s linear  infinite;
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
