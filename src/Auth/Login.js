@@ -21,7 +21,7 @@ export default function Login() {
     e.preventDefault();
     setAccept(true);
     try {
-      const res = await axios.post("http://127.0.0.1:8000/api/login", form);
+      const res = await axios.post("https://boreable-lavina-nonprofitablely.ngrok-free.dev/api/login", form);
       const token = res.data.data.token;
       cookie.set("Bearer", token,{path:"/"});
       const userDetails = res.data.data.user;

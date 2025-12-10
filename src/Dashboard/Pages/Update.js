@@ -19,9 +19,15 @@ export default function Update() {
   const token = user.auth.token;
 
   useEffect(() => {
-    fetch(`http://127.0.0.1:8000/api/user/showbyid/${id}`, {
-      headers: { Authorization: "Bearer " + token },
-    })
+    fetch(
+      `https://boreable-lavina-nonprofitablely.ngrok-free.dev/api/user/showbyid/${id}`,
+      {
+        headers: {
+          Authorization: "Bearer " + token,
+          "ngrok-skip-browser-warning": "true",
+        },
+      }
+    )
       .then((res) => res.json())
       .then((data) =>
         setForm({
@@ -37,9 +43,13 @@ export default function Update() {
     e.preventDefault();
     setAccept(true);
     try {
-      await axios.post(`http://127.0.0.1:8000/api/user/update/${id}`, form, {
-        headers: { Authorization: "Bearer " + token },
-      });
+      await axios.post(
+        `https://boreable-lavina-nonprofitablely.ngrok-free.dev/api/user/update/${id}`,
+        form,
+        {
+          headers: { Authorization: "Bearer " + token },
+        }
+      );
       nav("/dashboard/users");
     } catch (err) {
       if (err.response.data.message === "The email has already been taken.") {

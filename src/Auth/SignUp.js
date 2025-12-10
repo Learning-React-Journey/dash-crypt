@@ -23,7 +23,7 @@ export default function SignUp() {
     e.preventDefault();
     setAccept(true);
     try {
-      const res = await axios.post(`http://127.0.0.1:8000/api/register`, form);
+      const res = await axios.post(`https://boreable-lavina-nonprofitablely.ngrok-free.dev/api/register`, form);
       const token = res.data.data.token;
       cookie.set("Bearer", token, {path:"/"});
       const userDetails = res.data.data.user;

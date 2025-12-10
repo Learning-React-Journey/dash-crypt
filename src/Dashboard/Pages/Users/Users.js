@@ -15,9 +15,10 @@ export default function Users() {
 
   useEffect(() => {
     axios
-      .get("http://127.0.0.1:8000/api/user/show", {
+      .get("https://boreable-lavina-nonprofitablely.ngrok-free.dev/api/user/show", {
         headers: {
           Authorization: "Bearer " + token,
+          'ngrok-skip-browser-warning': 'true'
         },
       })
       .then((data) => setUsers(data.data))
@@ -27,7 +28,7 @@ export default function Users() {
   async function deleteUser(id) {
     try {
       const res = await axios.delete(
-        `http://127.0.0.1:8000/api/user/delete/${id}`,{headers:{
+        `https://boreable-lavina-nonprofitablely.ngrok-free.dev/api/user/delete/${id}`,{headers:{
           Authorization:"Bearer " + token,
         }}
       );

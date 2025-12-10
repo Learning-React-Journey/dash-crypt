@@ -21,7 +21,7 @@ export default function NewUser() {
     e.preventDefault();
     setAccept(true);
     try {
-      await axios.post(`http://127.0.0.1:8000/api/user/create`, form, {
+      await axios.post(`https://boreable-lavina-nonprofitablely.ngrok-free.dev/api/user/create`, form, {
         headers: { Authorization: "Bearer " + token },
       });
       nav("/dashboard/users");
